@@ -1,0 +1,30 @@
+sample,Group,Condition,Label,Virus,Day,DPI IAV,DPI SARS-CoV-2,type,order,bam_id,plot order
+IAV_D7_1,infected-iav-d7,IAV Day 10,IAV d10 Lung,IAV Only,10,10,,single-read,1,sorted_Flu_D7_1,18
+IAV_D7_2,infected-iav-d7,IAV Day 10,IAV d10 Lung,IAV Only,10,10,,single-read,2,sorted_Flu_D7_2,19
+IAV_D7_3,infected-iav-d7,IAV Day 10,IAV d10 Lung,IAV Only,10,10,,single-read,3,sorted_Flu_D7_3,20
+IAV_D7_4,infected-iav-d7,IAV Day 10,IAV d10 Lung,IAV Only,10,10,,single-read,4,sorted_Flu_D7_4,21
+IAV_D3_1,infected-iav-d3,IAV Day 6,IAV d6 Lung,IAV Only,6,6,,single-read,5,sorted_FluD3_1,14
+IAV_D3_2,infected-iav-d3,IAV Day 6,IAV d6 Lung,IAV Only,6,6,,single-read,6,sorted_FluD3_2,15
+IAV_D3_3,infected-iav-d3,IAV Day 6,IAV d6 Lung,IAV Only,6,6,,single-read,7,sorted_FluD3_3,16
+IAV_D3_4,infected-iav-d3,IAV Day 6,IAV d6 Lung,IAV Only,6,6,,single-read,8,sorted_FluD3_4,17
+COVID_D7_1,infected-sars-cov-2-d7,SARS-CoV-2 Day 7,SARS-Cov-2 d10 Lung,SARS-CoV-2 Only,10,,7,single-read,9,sorted_SC2_D7_1,10
+COVID_D7_2,infected-sars-cov-2-d7,SARS-CoV-2 Day 7,SARS-Cov-2 d10 Lung,SARS-CoV-2 Only,10,,7,single-read,10,sorted_SC2_D7_2,11
+COVID_D7_3,infected-sars-cov-2-d7,SARS-CoV-2 Day 7,SARS-Cov-2 d10 Lung,SARS-CoV-2 Only,10,,7,single-read,11,sorted_SC2_D7_3,12
+COVID_D7_4,infected-sars-cov-2-d7,SARS-CoV-2 Day 7,SARS-Cov-2 d10 Lung,SARS-CoV-2 Only,10,,7,single-read,12,sorted_SC2_D7_4,13
+CoInf_D7_1,co-infected-d7,Coinfection Day 7,Coinfection d10 Lung,IAV/SARS-CoV-2,10,10,7,single-read,13,sorted_SC2_Flu_D7_1,26
+CoInf_D7_2,co-infected-d7,Coinfection Day 7,Coinfection d10 Lung,IAV/SARS-CoV-2,10,10,7,single-read,14,sorted_SC2_Flu_D7_2,27
+CoInf_D7_3,co-infected-d7,Coinfection Day 7,Coinfection d10 Lung,IAV/SARS-CoV-2,10,10,7,single-read,15,sorted_SC2_Flu_D7_3,28
+CoInf_D7_4,co-infected-d7,Coinfection Day 7,Coinfection d10 Lung,IAV/SARS-CoV-2,10,10,7,single-read,16,sorted_SC2_Flu_D7_4,29
+COVID_D3_1,infected-sars-cov-2-d3,SARS-CoV-2 Day 3,SARS-Cov-2 d6 Lung,SARS-CoV-2 Only,6,,3,single-read,17,sorted_SCV_D3_1,6
+COVID_D3_2,infected-sars-cov-2-d3,SARS-CoV-2 Day 3,SARS-Cov-2 d6 Lung,SARS-CoV-2 Only,6,,3,single-read,18,sorted_SCV_D3_2,7
+COVID_D3_3,infected-sars-cov-2-d3,SARS-CoV-2 Day 3,SARS-Cov-2 d6 Lung,SARS-CoV-2 Only,6,,3,single-read,19,sorted_SCV_D3_3,8
+COVID_D3_4,infected-sars-cov-2-d3,SARS-CoV-2 Day 3,SARS-Cov-2 d6 Lung,SARS-CoV-2 Only,6,,3,single-read,20,sorted_SCV_D3_4,9
+CoInf_D3_1,co-infected-d3,Coinfection Day 3,Coinfection d6 Lung,IAV/SARS-CoV-2,6,6,3,single-read,21,sorted_SCV_Flu_D3_1,22
+CoInf_D3_2,co-infected-d3,Coinfection Day 3,Coinfection d6 Lung,IAV/SARS-CoV-2,6,6,3,single-read,22,sorted_SCV_Flu_D3_2,23
+CoInf_D3_3,co-infected-d3,Coinfection Day 3,Coinfection d6 Lung,IAV/SARS-CoV-2,6,6,3,single-read,23,sorted_SCV_Flu_D3_3,24
+CoInf_D3_4,co-infected-d3,Coinfection Day 3,Coinfection d6 Lung,IAV/SARS-CoV-2,6,6,3,single-read,24,sorted_SCV_Flu_D3_4,25
+C1,mock,Mock,Mock d10 Lung,PBS Control,10,,,single-read,25,sorted_UnInf1,1
+C2,mock,Mock,Mock d10 Lung,PBS Control,10,,,single-read,26,sorted_UnInf2,2
+C3,mock,Mock,Mock d10 Lung,PBS Control,10,,,single-read,27,sorted_UnInf3,3
+C4,mock,Mock,Mock d10 Lung,PBS Control,10,,,single-read,28,sorted_UnInf4,4
+C5,mock,Mock,Mock d10 Lung,PBS Control,10,,,single-read,29,sorted_UnInf5,5
