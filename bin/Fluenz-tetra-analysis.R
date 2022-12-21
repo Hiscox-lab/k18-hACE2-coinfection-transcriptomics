@@ -290,11 +290,12 @@ D10_down<-c(" ","Down","-",nrow(de.genes.d10fluenz_SARS_v_SARS.down),"-",nrow(de
 table2<-as.data.frame(rbind(D6_up,D6_down,D10_up,D10_down))
 colnames(table2)<-colnam
 
+table2
+
 table2<-gt(table2)%>%
   tab_header(
     title = md("Count of differentially expressed genes"))
 
-table2
 
 table2 %>% gtsave("../results/illumina/table_2.docx")
 
@@ -376,6 +377,22 @@ dotplot(simplifyBP, x = "group", showCategory = FTterms, color="qvalue", include
 ggsave("../plots/illumina/Figure15.tiff", device = "tiff", dpi=300,height=9,width=11,units="in")
 
 
+#plot CC and MF for supplementary
+
+dotplot(simplifyCC, x = "group", showCategory = 10, color="qvalue", includeAll = TRUE) + ggplot2::facet_grid(~factor(othergroup)+factor(day, levels=c('Day 6', 'Day 10')), 
+                                                                                                                  labeller = label_wrap_gen())+
+  theme_pubr()+
+  xlab("")
+
+ggsave("../plots/illumina/Supplementary_Figure6.tiff", device = "tiff", dpi=300,height=13,width=11,units="in")
+
+dotplot(simplifyMF, x = "group", showCategory = 10, color="qvalue", includeAll = TRUE) + ggplot2::facet_grid(~factor(othergroup)+factor(day, levels=c('Day 6', 'Day 10')), 
+                                                                                                             labeller = label_wrap_gen())+
+  theme_pubr()+
+  xlab("")
+
+ggsave("../plots/illumina/Supplementary_Figure7.tiff", device = "tiff", dpi=300,height=13,width=11,units="in")
+
 # generate table for publication to show dge genes for fluenztetra
 
 suptab1<-de.genes.d6fluenz_SARS_v_SARS %>%
@@ -407,4 +424,9 @@ suptab1 %>% gtsave("../results/illumina/supplementary_table_1.docx")
 suptab2 %>% gtsave("../results/illumina/supplementary_table_2.docx")
 
 
+#write gene ontology results to CSV
+
+write.csv(as.data.frame(simplifyBP@compareClusterResult), "../results/illumina/gene-ontology-fluenz-BP.csv")
+write.csv(as.data.frame(simplifyCC@compareClusterResult), "../results/illumina/gene-ontology-fluenz-CC.csv")
+write.csv(as.data.frame(simplifyMF@compareClusterResult), "../results/illumina/gene-ontology-fluenz-MF.csv")
 
