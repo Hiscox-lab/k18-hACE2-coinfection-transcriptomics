@@ -34,3 +34,10 @@ Jordan J. Clark<sup>1†</sup>, Rebekah Penrice-Randal<sup>1†</sup>, Parul Sha
 ## Preprint
 
 https://www.biorxiv.org/content/10.1101/2020.10.13.334532v2.abstract
+
+## Data availability
+
+Sequencing reads have been uploaded to bioproject: 
+
+PRJNA914664 : K18-hACE2 mice, SARS-CoV-2 and IAV coinfection transcriptomics
+
