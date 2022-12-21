@@ -1,0 +1,68 @@
+﻿Sample,Total Number of Reads,Virus,Day,Label,Contrasts,Tissue,Treatment
+Sample_1-1708IAV_alone_hACE2_D3_RL_1,219719539,IAV,6,IAV d6 Lung,IAV_d6_Lung,Lung,IAV infected
+Sample_2-1709IAV_alone_hACE2_D3_RL_2,233073870,IAV,6,IAV d6 Lung,IAV_d6_Lung,Lung,IAV infected
+Sample_3-1710IAV_alone_hACE2_D3_RL_3,194386959,IAV,6,IAV d6 Lung,IAV_d6_Lung,Lung,IAV infected
+Sample_4-1711IAV_alone_hACE2_D3_RL_4,312693890,IAV,6,IAV d6 Lung,IAV_d6_Lung,Lung,IAV infected
+Sample_5-1712SC2_alone_hACE2_D3_RL_1,281901393,SARS-CoV-2,6,SARS-Cov-2 d6 Lung,SARS_Cov_2_d6_Lung,Lung,SARS-CoV-2 infected
+Sample_6-1713SC2_alone_hACE2_D3_RL_2,177165935,SARS-CoV-2,6,SARS-Cov-2 d6 Lung,SARS_Cov_2_d6_Lung,Lung,SARS-CoV-2 infected
+Sample_7-1714SC2_alone_hACE2_D3_RL_3,205247347,SARS-CoV-2,6,SARS-Cov-2 d6 Lung,SARS_Cov_2_d6_Lung,Lung,SARS-CoV-2 infected
+Sample_8-1715SC2_alone_hACE2_D3_RL_4,180518308,SARS-CoV-2,6,SARS-Cov-2 d6 Lung,SARS_Cov_2_d6_Lung,Lung,SARS-CoV-2 infected
+Sample_9-1716IAV_SC2_hACE2_D3_RL_1,262463624,Coinfection,6,Coinfection d6 Lung,Coinfection_d6_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_10-1717IAV_SC2_hACE2_D3_RL_2,166830418,Coinfection,6,Coinfection d6 Lung,Coinfection_d6_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_11-1718IAV_SC2_hACE2_D3_RL_3,204730781,Coinfection,6,Coinfection d6 Lung,Coinfection_d6_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_12-1719IAV_SC2_hACE2_D3_RL_4,230922408,Coinfection,6,Coinfection d6 Lung,Coinfection_d6_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_13-1720IAV_alone_hACE2_D7_RL_1,85917578,IAV,10,IAV d10 Lung,IAV_d10_Lung,Lung,IAV infected
+Sample_14-1721IAV_alone_hACE2_D7_RL_2,211628216,IAV,10,IAV d10 Lung,IAV_d10_Lung,Lung,IAV infected
+Sample_15-1722IAV_alone_hACE2_D7_RL_3,131493552,IAV,10,IAV d10 Lung,IAV_d10_Lung,Lung,IAV infected
+Sample_16-1723IAV_alone_hACE2_D7_RL_4,18227909,IAV,10,IAV d10 Lung,IAV_d10_Lung,Lung,IAV infected
+Sample_17-1724IAV_alone_hACE2_D7_RL_5,161671673,IAV,10,IAV d10 Lung,IAV_d10_Lung,Lung,IAV infected
+Sample_18-1725SC2_alone_hACE2_D7_RL_1,187490762,SARS-CoV-2,10,SARS-Cov-2 d10 Lung,SARS_Cov_2_d10_Lung,Lung,SARS-CoV-2 infected
+Sample_19-1726SC2_alone_hACE2_D7_RL_2,206048310,SARS-CoV-2,10,SARS-Cov-2 d10 Lung,SARS_Cov_2_d10_Lung,Lung,SARS-CoV-2 infected
+Sample_20-1727SC2_alone_hACE2_D7_RL_3,132293367,SARS-CoV-2,10,SARS-Cov-2 d10 Lung,SARS_Cov_2_d10_Lung,Lung,SARS-CoV-2 infected
+Sample_21-1728SC2_alone_hACE2_D7_RL_4,219214905,SARS-CoV-2,10,SARS-Cov-2 d10 Lung,SARS_Cov_2_d10_Lung,Lung,SARS-CoV-2 infected
+Sample_22-1729IAV_SC2_hACE2_D7_RL_1,257396776,Coinfection,10,Coinfection d10 Lung,Coinfection_d10_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_23-1730IAV_SC2_hACE2_D7_RL_2,208611506,Coinfection,10,Coinfection d10 Lung,Coinfection_d10_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_24-1731IAV_SC2_hACE2_D7_RL_3,207723293,Coinfection,10,Coinfection d10 Lung,Coinfection_d10_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_25-1732IAV_SC2_hACE2_D7_RL_4,217730102,Coinfection,10,Coinfection d10 Lung,Coinfection_d10_Lung,Lung,Coinfection with IAV and SARS-CoV-2
+Sample_26-1733Ctrl_hACE2_D7_RL_1,333595077,Mock,10,Mock d10 Lung,Mock_d10_Lung,Lung,Mock infected with PBS
+Sample_27-1734Ctrl_hACE2_D7_RL_2,157840016,Mock,10,Mock d10 Lung,Mock_d10_Lung,Lung,Mock infected with PBS
+Sample_28-1735Ctrl_hACE2_D7_RL_3,158943181,Mock,10,Mock d10 Lung,Mock_d10_Lung,Lung,Mock infected with PBS
+Sample_29-1736Ctrl_hACE2_D7_RL_4,179868032,Mock,10,Mock d10 Lung,Mock_d10_Lung,Lung,Mock infected with PBS
+Sample_30-2255FluMist_21_12_2020_FluMist_Alone_D3_RL_1,165297070,FluMIST,6,FluMIST d6 Lung,IAV_Vax_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_31-2256FluMist_21_12_2020_FluMist_Alone_D3_RL_2,103260073,FluMIST,6,FluMIST d6 Lung,IAV_Vax_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_32-2257FluMist_21_12_2020_FluMist_Alone_D3_RL_3,218414476,FluMIST,6,FluMIST d6 Lung,IAV_Vax_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_33-2258FluMist_21_12_2020_FluMist_Alone_D3_RL_4,304957490,FluMIST,6,FluMIST d6 Lung,IAV_Vax_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_34-2259FluMist_21_12_2020_FluMist_SC2_D3_RL_1,231283890,FluMIST + SARS-CoV-2,6,FluMIST and SARS-CoV-2 d6 Lung,IAV_Vax_coinfection_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_35-2260FluMist_21_12_2020_FluMist_SC2_D3_RL_2,234527984,FluMIST + SARS-CoV-2,6,FluMIST and SARS-CoV-2 d6 Lung,IAV_Vax_coinfection_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_36-2261FluMist_21_12_2020_FluMist_SC2_D3_RL_3,233352983,FluMIST + SARS-CoV-2,6,FluMIST and SARS-CoV-2 d6 Lung,IAV_Vax_coinfection_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_37-2262FluMist_21_12_2020_FluMist_SC2_D3_RL_4,230177002,FluMIST + SARS-CoV-2,6,FluMIST and SARS-CoV-2 d6 Lung,IAV_Vax_coinfection_d6_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_38-2263FluMist_21_12_2020_FluMist_Alone_D7_RL_1,156931547,FluMIST,10,FluMIST d10 Lung,IAV_Vax_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_39-2264FluMist_21_12_2020_FluMist_Alone_D7_RL_2,160317166,FluMIST,10,FluMIST d10 Lung,IAV_Vax_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_40-2265FluMist_21_12_2020_FluMist_Alone_D7_RL_3,183641262,FluMIST,10,FluMIST d10 Lung,IAV_Vax_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_41-2266FluMist_21_12_2020_FluMist_Alone_D7_RL_4,192868788,FluMIST,10,FluMIST d10 Lung,IAV_Vax_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine
+Sample_42-2267FluMist_21_12_2020_FluMist_SC2_D7_RL_1,176855271,FluMIST + SARS-CoV-2,10,FluMIST and SARS-CoV-2 d10 Lung,IAV_Vax_coinfection_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_43-2268FluMist_21_12_2020_FluMist_SC2_D7_RL_2,169990665,FluMIST + SARS-CoV-2,10,FluMIST and SARS-CoV-2 d10 Lung,IAV_Vax_coinfection_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_44-2269FluMist_21_12_2020_FluMist_SC2_D7_RL_3,175725694,FluMIST + SARS-CoV-2,10,FluMIST and SARS-CoV-2 d10 Lung,IAV_Vax_coinfection_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_45-2270FluMist_21_12_2020_FluMist_SC2_D7_RL_4,209892855,FluMIST + SARS-CoV-2,10,FluMIST and SARS-CoV-2 d10 Lung,IAV_Vax_coinfection_d10_Lung,Lung,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_46-3750Flu_mist_Alone_07_blood_1,168881851,FluMIST,10,FluMIST d10 Blood,IAV_Vax_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine
+Sample_47-3751Flu_mist_Alone_07_blood_2,117211566,FluMIST,10,FluMIST d10 Blood,IAV_Vax_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine
+Sample_48-3752Flu_mist_Alone_07_blood_3,174022300,FluMIST,10,FluMIST d10 Blood,IAV_Vax_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine
+Sample_49-3753Flu_mist_Alone_07_blood_4,180584846,FluMIST,10,FluMIST d10 Blood,IAV_Vax_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine
+Sample_50-3754Flu_mist_SC2_07_blood_1,182856824,FluMIST + SARS-CoV-2,10,FluMIST coinfection d10 Blood,IAV_Vax_coinfection_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_51-3755Flu_mist_SC2_07_blood_2,170344188,FluMIST + SARS-CoV-2,10,FluMIST coinfection d10 Blood,IAV_Vax_coinfection_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_52-3756Flu_mist_SC2_07_blood_3,138482640,FluMIST + SARS-CoV-2,10,FluMIST coinfection d10 Blood,IAV_Vax_coinfection_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_53-3757Flu_mist_SC2_07_blood_4,175587371,FluMIST + SARS-CoV-2,10,FluMIST coinfection d10 Blood,IAV_Vax_coinfection_d10_Blood,Blood,Vaccinated with quadravalent attenuated flu vaccine and infected with SARS-CoV-2
+Sample_54-3758IAV_Alone_07_hACE2_blood_1,173345645,IAV,10,IAV d10 Blood,IAV_d10_Blood,Blood,IAV infected
+Sample_55-3759IAV_Alone_07_hACE2_blood_2,143191750,IAV,10,IAV d10 Blood,IAV_d10_Blood,Blood,IAV infected
+Sample_56-3760IAV_Alone_07_hACE2_blood_3,199866313,IAV,10,IAV d10 Blood,IAV_d10_Blood,Blood,IAV infected
+Sample_57-3761IAV_Alone_07_hACE2_blood_4,212202265,IAV,10,IAV d10 Blood,IAV_d10_Blood,Blood,IAV infected
+Sample_58-3762Ctrl_07_ACE2_blood_1,145134539,Mock,10,Mock d10 Blood,Mock_d10_Blood,Blood,Mock infected with PBS
+Sample_59-3763Ctrl_07_ACE2_blood_2,191245968,Mock,10,Mock d10 Blood,Mock_d10_Blood,Blood,Mock infected with PBS
+Sample_60-3764Ctrl_07_ACE2_blood_3,151355463,Mock,10,Mock d10 Blood,Mock_d10_Blood,Blood,Mock infected with PBS
+Sample_61-3765Ctrl_07_hACE2_blood_4,145253739,Mock,10,Mock d10 Blood,Mock_d10_Blood,Blood,Mock infected with PBS
+Sample_62-3816SC2_IAV_10_4_07_hACE2_blood_1,169392910,Coinfection,10,Coinfection d10 Blood,Coinfection_d10_Blood,Blood,Coinfection with IAV and SARS-CoV-2
+Sample_63-3817SC2_IAV_10_4_07_hACE2_blood_2,207572346,Coinfection,10,Coinfection d10 Blood,Coinfection_d10_Blood,Blood,Coinfection with IAV and SARS-CoV-2
+Sample_64-3818SC2_IAV_10_4_07_hACE2_blood_3,181524863,Coinfection,10,Coinfection d10 Blood,Coinfection_d10_Blood,Blood,Coinfection with IAV and SARS-CoV-2
+Sample_65-3819SC2_IAV_10_4_07_hACE2_blood_4,171905793,Coinfection,10,Coinfection d10 Blood,Coinfection_d10_Blood,Blood,Coinfection with IAV and SARS-CoV-2
+Sample_66-3820SC2_10_4_07_hACE2_blood_3,132460289,SARS-Cov-2,10,SARS-Cov-2 d10 Blood,SARS_Cov_2_d10_Blood,Blood,SARS-CoV-2 infected
+Sample_67-3821SC2_10_4_07_hACE2_blood_4,191452912,SARS-Cov-2,10,SARS-Cov-2 d10 Blood,SARS_Cov_2_d10_Blood,Blood,SARS-CoV-2 infected
