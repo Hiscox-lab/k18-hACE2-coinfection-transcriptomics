@@ -372,9 +372,10 @@ FTterms<-c("response to virus","regulation of T cell activation", "leukocyte agg
 dotplot(simplifyBP, x = "group", showCategory = FTterms, color="qvalue", includeAll = TRUE) + ggplot2::facet_grid(~factor(othergroup)+factor(day, levels=c('Day 6', 'Day 10')), 
                                                                                                                  labeller = label_wrap_gen())+
   theme_pubr()+
-  xlab("")
+  xlab("")+
+  guides(color = guide_colourbar(barwidth = 12, barheight = 1))
 
-ggsave("../plots/illumina/Figure15.tiff", device = "tiff", dpi=300,height=9,width=11,units="in")
+ggsave("../plots/illumina/Figure14.tiff", device = "tiff", dpi=300,height=9,width=11,units="in")
 
 
 #plot CC and MF for supplementary
@@ -382,16 +383,18 @@ ggsave("../plots/illumina/Figure15.tiff", device = "tiff", dpi=300,height=9,widt
 dotplot(simplifyCC, x = "group", showCategory = 10, color="qvalue", includeAll = TRUE) + ggplot2::facet_grid(~factor(othergroup)+factor(day, levels=c('Day 6', 'Day 10')), 
                                                                                                                   labeller = label_wrap_gen())+
   theme_pubr()+
-  xlab("")
+  xlab("")+
+  guides(color = guide_colourbar(barwidth = 12, barheight = 1))
 
-ggsave("../plots/illumina/Supplementary_Figure6.tiff", device = "tiff", dpi=300,height=13,width=11,units="in")
+ggsave("../plots/illumina/Supplementary_Figure7.tiff", device = "tiff", dpi=300,height=13,width=11,units="in")
 
 dotplot(simplifyMF, x = "group", showCategory = 10, color="qvalue", includeAll = TRUE) + ggplot2::facet_grid(~factor(othergroup)+factor(day, levels=c('Day 6', 'Day 10')), 
                                                                                                              labeller = label_wrap_gen())+
   theme_pubr()+
-  xlab("")
+  xlab("")+
+  guides(color = guide_colourbar(barwidth = 12, barheight = 1))
 
-ggsave("../plots/illumina/Supplementary_Figure7.tiff", device = "tiff", dpi=300,height=13,width=11,units="in")
+ggsave("../plots/illumina/Supplementary_Figure8.tiff", device = "tiff", dpi=300,height=13,width=11,units="in")
 
 # generate table for publication to show dge genes for fluenztetra
 

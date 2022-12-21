@@ -211,7 +211,8 @@ plot_heatmap <- function(plot_genes, title='', inputDgList,sample_annotation,gen
     #color = colorRampPalette(rev(RColorBrewer::brewer.pal(n = 7, name = "RdYlBu")))(100),
     main = title,
     cutree_cols = 6,
-    cutree_rows = 2,
+    cutree_rows = 3,
+    cex = 1
   )
 }
 
@@ -484,7 +485,7 @@ dotplot(simplifyBP, x = "othergroup", showCategory = terms, color="qvalue", incl
   xlab("")+
   guides(color = guide_colourbar(barwidth = 12, barheight = 1))
 
-ggsave("../plots/illumina/Figure14.tiff", device = "tiff", dpi = 300, width = 12, height = 7)
+ggsave("../plots/illumina/Figure12.tiff", device = "tiff", dpi = 300, width = 12, height = 7)
 
 
 #plot CC and MF terms for supplementary
