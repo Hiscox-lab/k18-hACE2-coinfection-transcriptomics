@@ -15,6 +15,9 @@ library(GOSemSim)
 library(cowplot)
 library(statmod)
 library(biomaRt)
+library(gt)
+library(tidyverse)
+library(glue)
 
 
 #setwd
@@ -107,6 +110,7 @@ plotMDS(dgList)
 #remove samples with low library sizes
 dgList <- dgList[,which(!dgList$samples$Sample == "Sample_31-2256FluMist_21_12_2020_FluMist_Alone_D3_RL_2")]
 dgList <- dgList[,which(!dgList$samples$Sample == "Sample_16-1723IAV_alone_hACE2_D7_RL_4")]
+dgList <- dgList[,which(!dgList$samples$Sample == "Sample_27-1734Ctrl_hACE2_D7_RL_2")]
 
 #model matrix
 design <- model.matrix(~0+ group, data = dgList$samples)
@@ -120,10 +124,10 @@ fit <- glmQLFit(dgGlm, design, robust = TRUE)
 
 #make contrasts
 my.contrasts <- makeContrasts(
-  d6fluenz_SARS_v_SARS = (groupSARS_Cov_2_d6_Lung-groupMock_d10_Lung)-(groupIAV_fluenz_coinfection_d6_Lung-groupMock_d10_Lung),
-  d6fluenz_SARS_v_Coinf= (groupCoinfection_d6_Lung-groupMock_d10_Lung)-(groupIAV_fluenz_coinfection_d6_Lung-groupMock_d10_Lung),
-  d10fluenz_SARS_v_SARS = (groupSARS_Cov_2_d10_Lung-groupMock_d10_Lung)-(groupIAV_fluenz_coinfection_d10_Lung-groupMock_d10_Lung),
-  d10fluenz_SARS_v_coinf=(groupCoinfection_d10_Lung-groupMock_d10_Lung)-(groupIAV_fluenz_coinfection_d10_Lung-groupMock_d10_Lung),
+  d6fluenz_SARS_v_SARS = (groupSARS_Cov_2_d6_Lung-groupMock_d10_Lung)-(groupIAV_Vax_coinfection_d6_Lung-groupMock_d10_Lung),
+  d6fluenz_SARS_v_Coinf= (groupCoinfection_d6_Lung-groupMock_d10_Lung)-(groupIAV_Vax_coinfection_d6_Lung-groupMock_d10_Lung),
+  d10fluenz_SARS_v_SARS = (groupSARS_Cov_2_d10_Lung-groupMock_d10_Lung)-(groupIAV_Vax_coinfection_d10_Lung-groupMock_d10_Lung),
+  d10fluenz_SARS_v_coinf=(groupCoinfection_d10_Lung-groupMock_d10_Lung)-(groupIAV_Vax_coinfection_d10_Lung-groupMock_d10_Lung),
   levels=design)
 
 #de genes in one object
@@ -274,6 +278,30 @@ de.genes.d10fluenz_SARS_v_coinf.up          <- get.up.de.genes(de.genes.d10fluen
 de.genes.d10fluenz_SARS_v_coinf.down       <-get.down.de.genes(de.genes.d10fluenz_SARS_v_coinf)
 
 
+
+
+colnam<-c("Group","Up/Down","SARS-CoV-2 Day 6 vs Mock", "SARS-CoV-2 Day 10 vs Mock","Coinfection Day 6 vs Mock","Coinfection Day 10 vs Mock")
+D6_up<-c("Fluenz Tetra + SARS-CoV-2 Day 6 vs Mock","Up",nrow(de.genes.d6fluenz_SARS_v_SARS.up),"-",nrow(de.genes.d6fluenz_SARS_v_coinf.up),"-")
+D6_down<-c(" ","Down",nrow(de.genes.d6fluenz_SARS_v_SARS.down),"-",nrow(de.genes.d6fluenz_SARS_v_coinf.down),"-")
+D10_up<-c("Fluenz Tetra + SARS-CoV-2 Day 10 vs Mock","Up","-",nrow(de.genes.d10fluenz_SARS_v_SARS.up),"-",nrow(de.genes.d10fluenz_SARS_v_coinf.up))
+D10_down<-c(" ","Down","-",nrow(de.genes.d10fluenz_SARS_v_SARS.down),"-",nrow(de.genes.d10fluenz_SARS_v_coinf.down))
+
+
+table2<-as.data.frame(rbind(D6_up,D6_down,D10_up,D10_down))
+colnames(table2)<-colnam
+
+table2<-gt(table2)%>%
+  tab_header(
+    title = md("Count of differentially expressed genes"))
+
+table2
+
+table2 %>% gtsave("../results/illumina/table_2.docx")
+
+
+
+
+
 #add in new column with descriptions before rbinding into one dataframe
 de.genes.d6fluenz_SARS_v_SARS.up$group   <- "Up"
 de.genes.d6fluenz_SARS_v_SARS.down$group <- "Down"
@@ -348,8 +376,35 @@ dotplot(simplifyBP, x = "group", showCategory = FTterms, color="qvalue", include
 ggsave("../plots/illumina/Figure15.tiff", device = "tiff", dpi=300,height=9,width=11,units="in")
 
 
+# generate table for publication to show dge genes for fluenztetra
 
+suptab1<-de.genes.d6fluenz_SARS_v_SARS %>%
+  select(gene_name, logFC,FDR, description) %>%
+  mutate(across(logFC, round, 2)) %>%
+  arrange(desc(logFC))%>%
+  rename("gene name"=gene_name)%>%
+  mutate_at(c('description'), ~replace_na(.,""))%>%
+  gt()%>%
+  tab_header(
+    title = md("Differentially expressed genes"),
+    subtitle = "Fluenz tetra and SARS-CoV-2 infection vs SARS-CoV-2 only infection at day 6"
+  )
 
+suptab1
+suptab2<-de.genes.d10fluenz_SARS_v_SARS %>%
+  select(gene_name, logFC,FDR, description) %>%
+  mutate(across(logFC, round, 2)) %>%
+  arrange(desc(logFC))%>%
+  rename("gene name"=gene_name)%>%
+  mutate_at(c('description'), ~replace_na(.,""))%>%
+  gt()%>%
+  tab_header(
+    title = md("Differentially expressed genes"),
+    subtitle = "Fluenz tetra and SARS-CoV-2 infection vs SARS-CoV-2 only infection at day 10"
+  )
+
+suptab1 %>% gtsave("../results/illumina/supplementary_table_1.docx")
+suptab2 %>% gtsave("../results/illumina/supplementary_table_2.docx")
 
 
 

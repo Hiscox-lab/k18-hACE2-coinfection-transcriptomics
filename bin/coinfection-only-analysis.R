@@ -119,6 +119,7 @@ plotMDS(dgList)
 
 #remove samples with low library sizes
 dgList <- dgList[,which(!dgList$samples$Sample == "Sample_16-1723IAV_alone_hACE2_D7_RL_4")]
+dgList <- dgList[,which(!dgList$samples$Sample == "Sample_27-1734Ctrl_hACE2_D7_RL_2")]
 
 #plot PCA plot
 edgeR.DDS <- DESeqDataSetFromMatrix(countData = round(dgList$counts), colData = dgList$samples, design = ~0+ group)
@@ -406,6 +407,22 @@ de.genes.CoinfD7_fluD7.down  <-get.down.de.genes(de.genes.CoinfD7vIAVD7)
 de.genes.CoinfD3_fluD3.up    <-get.up.de.genes(de.genes.CoinfD3vIAVD3)
 de.genes.CoinfD3_fluD3.down  <-get.down.de.genes(de.genes.CoinfD3vIAVD3)
 
+colnam<-c("Group","Up/Down","IAV Day 6", "IAV Day 10", "SARS-CoV-2 Day 6","SARS-CoV-2 Day 10", "Coinfection Day 6", "Coinfection Day 10")
+mock_up<-c("Mock","Up",nrow(de.genes.IAVD6.up),nrow(de.genes.IAVD10.up),nrow(de.genes.SARSD3.up),nrow(de.genes.SARSD7.up), nrow(de.genes.CoinfD3.up),nrow(de.genes.CoinfD7.up))
+mock_down<-c("","Down",nrow(de.genes.IAVD6.down),nrow(de.genes.IAVD10.down),nrow(de.genes.SARSD3.down),nrow(de.genes.SARSD7.down), nrow(de.genes.CoinfD3.down),nrow(de.genes.CoinfD7.down))
+coinfD6_up<-c("Coinfection Day 6","Up",nrow(de.genes.CoinfD3_fluD3.up),"-",nrow(de.genes.CoinfD3_SARSD3.up),"-","-","-")
+coinfD6_down<-c("","Down",nrow(de.genes.CoinfD3_fluD3.down),"-",nrow(de.genes.CoinfD3_SARSD3.down),"-","-","-")
+coinfD10_up<-c("Coinfection Day 10","Up","-",nrow(de.genes.CoinfD7_fluD7.up),"-",nrow(de.genes.CoinfD7_SARSD7.up),"-","-")
+coinfD10_down<-c("","Down","-",nrow(de.genes.CoinfD7_fluD7.down),"-",nrow(de.genes.CoinfD7_SARSD7.down),"-","-")
+                                                                                                                                              
+table1<-as.data.frame(rbind(mock_up,mock_down,coinfD6_up,coinfD6_down,coinfD10_up,coinfD10_down))
+colnames(table1)<-colnam
+
+table1<-gt(table1)%>%
+  tab_header(
+    title = md("Count of differentially expressed genes"))
+
+table1 %>% gtsave("../results/illumina/table_1.docx")
 
 #add groups for labelling
 de.genes.CoinfD3.up$group <- "Up"
@@ -464,13 +481,42 @@ dotplot(simplifyBP, x = "othergroup", showCategory = terms, color="qvalue", incl
                             "SARS-CoV-2 Day 6",
                             "SARS-CoV-2 Day 10"))+
   theme_pubr()+
-  xlab("")
+  xlab("")+
+  guides(color = guide_colourbar(barwidth = 12, barheight = 1))
 
 ggsave("../plots/illumina/Figure14.tiff", device = "tiff", dpi = 300, width = 12, height = 7)
 
 
+#plot CC and MF terms for supplementary
+dotplot(simplifyCC, x = "group", showCategory = 5, color="qvalue", includeAll = TRUE)+
+  facet_grid(~factor(othergroup,levels = c("Coinfection Day 6",
+                                "Coinfection Day 10",
+                                "IAV Day 6",
+                                "IAV Day 10",
+                                "SARS-CoV-2 Day 6",
+                                "SARS-CoV-2 Day 10")))+
+  theme_pubr()+
+  xlab("")+
+  guides(color = guide_colourbar(barwidth = 12, barheight = 1))
 
-write.csv(as.data.frame(compareBP@compareClusterResult), "../results/illumina/gene-ontology-BP.csv")
+  ggsave("../plots/illumina/Supplementary_Figure5.tiff", device = "tiff", dpi = 300, width = 12, height = 14)
+
+dotplot(simplifyMF, x = "group", showCategory = 5, color="qvalue", includeAll = TRUE)+
+  facet_grid(~factor(othergroup,levels = c("Coinfection Day 6",
+                                           "Coinfection Day 10",
+                                           "IAV Day 6",
+                                           "IAV Day 10",
+                                           "SARS-CoV-2 Day 6",
+                                           "SARS-CoV-2 Day 10")))+
+  theme_pubr()+
+  xlab("")+
+  guides(color = guide_colourbar(barwidth = 12, barheight = 1))
+
+ggsave("../plots/illumina/Supplementary_Figure6.tiff", device = "tiff", dpi = 300, width = 12, height = 14)
+
+write.csv(as.data.frame(simplifyBP@compareClusterResult), "../results/illumina/gene-ontology-BP.csv")
+write.csv(as.data.frame(simplifyCC@compareClusterResult), "../results/illumina/gene-ontology-CC.csv")
+write.csv(as.data.frame(simplifyMF@compareClusterResult), "../results/illumina/gene-ontology-MF.csv")
 
 
 
