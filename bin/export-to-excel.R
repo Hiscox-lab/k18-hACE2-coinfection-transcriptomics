@@ -37,12 +37,12 @@ dataset_names <- list('Coinf-v-Mock-D6'= df1,
 
 write.xlsx(dataset_names, file = 'Supplementary-data-DGE.xlsx')
 
-GO1<-"../results/illumina/gene-ontology-BP.csv"
-GO2<-"../results/illumina/gene-ontology-CC.csv"
-GO3<-"../results/illumina/gene-ontology-MF.csv"
-GO4<-"../results/illumina/gene-ontology-fluenz-BP.csv"
-GO5<-"../results/illumina/gene-ontology-fluenz-CC.csv"
-GO6<-"../results/illumina/gene-ontology-fluenz-MF.csv"
+GO1<-read.csv("gene-ontology-BP.csv")
+GO2<-read.csv("gene-ontology-CC.csv")
+GO3<-read.csv("gene-ontology-MF.csv")
+GO4<-read.csv("gene-ontology-fluenz-BP.csv")
+GO5<-read.csv("gene-ontology-fluenz-CC.csv")
+GO6<-read.csv("gene-ontology-fluenz-MF.csv")
 
 dataset_names<-list('Coinfection BP'=GO1,
                     'Coinfection CC'=GO2,
