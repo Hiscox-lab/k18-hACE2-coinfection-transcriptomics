@@ -1,0 +1,12 @@
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_5-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_6-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_7-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_8-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_18-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_19-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_20-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_21-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_26-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_27-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_28-*
+/home/rebee/projects/mice-transcriptomics/data/illumina/Trimmed/Sample_29-*
