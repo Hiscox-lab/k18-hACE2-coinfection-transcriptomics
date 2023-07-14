@@ -1,12 +1,11 @@
 #coinfection analysis
 library(edgeR)
 library(limma)
-library(Glimma)
 library(gplots)
 library(org.Mm.eg.db)
 library(RColorBrewer)
 library(edgeR)
-library(tidyverse)
+library(dplyr)
 library(reshape2)
 library(biomaRt)
 library(ggplot2)
@@ -18,7 +17,8 @@ library(statmod)
 library(biomaRt)
 library(DESeq2)
 library(ggpubr)
-
+library(tximport)
+library(stringr)
 
 #setwd
 setwd("/home/rebee/projects/mice-transcriptomics/bin")
@@ -43,7 +43,7 @@ row.names(annotation) <- annotation$gene_id
 annotation$gene_id
 
 # import counts from salmon
-annotation_transcript <- elementMetadata(import(gtf_file, feature.type = 'transcript'))
+annotation_transcript <- elementMetadata(rtracklayer::import(gtf_file, feature.type = 'transcript'))
 tx2gene <- annotation_transcript[,c("transcript_id","gene_id")]
 head(tx2gene)
 quant <- list.files(list.dirs(path = "../data/illumina/quants/gencode_lungs/", full.names = TRUE, recursive = FALSE), pattern = "quant.sf", full.names = TRUE)
@@ -260,6 +260,19 @@ results.CoinfD3vIAVD3  <- left_join(results.CoinfD3vIAVD3 , ConvertedGenes, by =
 results.CoinfD7vIAVD7  <- left_join(results.CoinfD7vIAVD7 , ConvertedGenes, by = "gene_id")
 results.CoinfD3vSARSD3 <- left_join(results.CoinfD3vSARSD3, ConvertedGenes, by = "gene_id")
 results.CoinfD7vSARSD7 <- left_join(results.CoinfD7vSARSD7, ConvertedGenes, by = "gene_id")     
+
+
+
+write.csv(results.IAVD3VMock     , "../results/illumina/results.IAVD3VMock.csv")
+write.csv(results.IAVD7VMock     , "../results/illumina/results.IAVD7VMock.csv")
+write.csv(results.SARS2D3VMock   , "../results/illumina/results.SARS2D3VMock.csv")
+write.csv(results.SARS2D7VMock   , "../results/illumina/results.SARS2D7VMock.csv")
+write.csv(results.CoinfD3vmock   , "../results/illumina/results.CoinfD3vmock.csv")
+write.csv(results.CoinfD7vmock   , "../results/illumina/results.CoinfD7vmock.csv")
+write.csv(results.CoinfD3vIAVD3  , "../results/illumina/results.CoinfD3vIAVD3.csv")
+write.csv(results.CoinfD7vIAVD7  , "../results/illumina/results.CoinfD7vIAVD7.csv")
+write.csv(results.CoinfD3vSARSD3 , "../results/illumina/results.CoinfD3vSARSD3.csv")
+write.csv(results.CoinfD7vSARSD7 , "../results/illumina/results.CoinfD7vSARSD7.csv")
 
 
 #simple get de gene functions
